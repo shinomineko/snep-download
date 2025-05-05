@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -37,6 +37,7 @@
         max-width: 100%;
         height: auto;
         object-fit: cover;
+        cursor: pointer;
       }
     </style>
   </head>
@@ -44,8 +45,16 @@
   <body>
     <div class="content">
       <div class="himmel">
-        <img src="/himmel.webp" />
+        <img id="himmel" src="/himmel1.jpg" />
       </div>
     </div>
+    <script>
+      const img = document.getElementById("himmel");
+      img.addEventListener("click", function () {
+        this.src = this.src.includes("himmel1.jpg")
+          ? "himmel2.jpg"
+          : "himmel1.jpg";
+      });
+    </script>
   </body>
 </html>
