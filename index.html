@@ -13,11 +13,27 @@
         height: 100dvh;
       }
 
+      img {
+        display: block;
+        margin: 0 auto;
+        height: auto;
+        width: 100dvw;
+      }
+
+      @media (orientation: portrait) {
+        img {
+          width: auto;
+          height: 100dvh;
+        }
+      }
+
       :root {
         --bg: #faf4ed;
       }
 
       body {
+        margin: 0;
+        padding: 0;
         background-color: var(--bg);
       }
 
@@ -31,7 +47,7 @@
 
   <body>
     <div class="centered">
-      <img src="/snep.jpg" />
+      <img src="/dana-ward-BOMPRnyoGNY-unsplash.webp" />
     </div>
   </body>
 </html>
